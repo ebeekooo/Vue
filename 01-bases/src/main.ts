@@ -2,6 +2,7 @@ import "./style.css";
 import typescriptLogo from "./assets/typescript.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
+//import "./bases/01-const-let";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <section id="center">
