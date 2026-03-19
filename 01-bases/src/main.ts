@@ -3,6 +3,7 @@ import typescriptLogo from "./assets/typescript.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 //import "./bases/01-const-let";
+import "./bases/02-object";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <section id="center">
@@ -24,4 +25,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div class="ticks"></div>
 <section id="spacer"></section>
 `;
-console.log("Holi");
