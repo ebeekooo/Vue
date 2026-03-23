@@ -21,10 +21,10 @@ import { ref, watch } from 'vue';
 interface Props {
   messages: chatMessage[];
 }
-const { messages } = defineProps<Props>();
+const props = defineProps<Props>();
 
 const chatRef = ref<HTMLDivElement | null>(null);
-watch(messages, () => {
+watch(props.messages, () => {
   setTimeout(() => {
     chatRef.value?.scrollTo({
       top: chatRef.value.scrollHeight,
