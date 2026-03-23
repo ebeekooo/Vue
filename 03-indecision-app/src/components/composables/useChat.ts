@@ -1,6 +1,7 @@
 import { ref } from "vue";
 import type { chatMessage } from "@/interfaces/chat-msg-interface";
 import type { Response } from "@/interfaces/yes-no-response";
+import { sleep } from "@/helpers/sleep";
 
 export const useChat = () => {
   const messages = ref<chatMessage[]>([]);
@@ -19,6 +20,8 @@ export const useChat = () => {
     });
     //evaluar si termina en un ?
     if (!text.endsWith("?")) return;
+
+    await sleep(1.5);
     const { answer, image } = await getHerResponse();
     messages.value.push({
       id: new Date().getTime(),
