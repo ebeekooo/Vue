@@ -37,10 +37,14 @@
 <script setup lang="ts">
 import { send } from 'vite';
 import { ref } from 'vue';
+const emits = defineEmits<{
+  sendMessages: [text: string];
+}>();
+
 const message = ref<string>('');
 const sendMessage = () => {
   if (!message.value) return;
-  console.log(message.value);
+  emits('sendMessages', message.value);
   message.value = '';
 };
 </script>
