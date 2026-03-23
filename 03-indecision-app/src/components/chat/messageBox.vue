@@ -4,9 +4,12 @@
       type="text"
       placeholder="Type your message..."
       class="flex-1 border rounded-full px-4 py-2 focus:outline-none"
+      v-model="message"
+      @keypress.enter="sendMessage"
     />
     <button
       class="bg-blue-500 text-white rounded-full p-2 ml-2 hover:bg-blue-600 focus:outline-none"
+      @click="sendMessage"
     >
       <svg
         width="20px"
@@ -31,3 +34,13 @@
     </button>
   </div>
 </template>
+<script setup lang="ts">
+import { send } from 'vite';
+import { ref } from 'vue';
+const message = ref<string>('');
+const sendMessage = () => {
+  if (!message.value) return;
+  console.log(message.value);
+  message.value = '';
+};
+</script>
