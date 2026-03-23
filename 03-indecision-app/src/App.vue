@@ -2,7 +2,7 @@
   <h1>Mi primera app</h1>
   <hr />
 
-  <CounterApp></CounterApp>
+  <CounterApp :value="5" />
 </template>
 
 <script lang="ts" setup>
