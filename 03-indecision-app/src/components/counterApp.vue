@@ -22,6 +22,7 @@ const counter = ref(props.value ?? 5);
 const squareC = computed(() => counter.value * counter.value);
 </script>
 <style scoped>
+@reference "tailwindcss";
 .btn {
   @apply p-5 bg-blue-300 rounded hover:bg-blue-900;
 }
