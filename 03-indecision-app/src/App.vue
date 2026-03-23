@@ -1,5 +1,5 @@
 <template>
-  <h1>Mi primera app</h1>
+  <h1 class="text-3xl font-bold underline">Hello world!</h1>
   <hr />
 
   <CounterApp :value="5" />
