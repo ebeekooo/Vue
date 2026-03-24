@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "test:unit": "vitest",
+    "coverage": "vitest run --coverage",
     "type-check": "vue-tsc --build",
     "format": "oxfmt src/"
   },
@@ -22,6 +23,7 @@
     "@types/jsdom": "^28.0.1",
     "@types/node": "^24.11.0",
     "@vitejs/plugin-vue": "^6.0.4",
+    "@vitest/coverage-v8": "^4.1.1",
     "@vitest/ui": "^4.1.1",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
