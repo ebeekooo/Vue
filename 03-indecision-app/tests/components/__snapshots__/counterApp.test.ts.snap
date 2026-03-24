@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing counte > shouls match snapshot 1`] = `
+"<section data-v-4c0fd815="">
+  <h3 data-v-4c0fd815="">Counter:5</h3>
+  <h3 data-v-4c0fd815="">Square:25</h3>
+  <div data-v-4c0fd815=""><button data-v-4c0fd815="" class="btn">+1</button><button data-v-4c0fd815="" class="btn">-1</button></div>
+</section>"
+`;
+
+exports[`Testing counter > shouls match snapshot 1`] = `
+"<section data-v-4c0fd815="">
+  <h3 data-v-4c0fd815="">Counter:5</h3>
+  <h3 data-v-4c0fd815="">Square:25</h3>
+  <div data-v-4c0fd815=""><button data-v-4c0fd815="" class="btn">+1</button><button data-v-4c0fd815="" class="btn">-1</button></div>
+</section>"
+`;
