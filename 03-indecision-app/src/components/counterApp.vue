@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>Counter:{{ 10 }}</h3>
+    <h3>Counter:{{ counter }}</h3>
     <h3>Square:{{ squareC }}</h3>
 
     <div>
