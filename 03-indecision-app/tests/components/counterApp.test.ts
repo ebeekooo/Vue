@@ -1,6 +1,5 @@
-import { describe, test } from "vitest";
 import { mount } from "@vue/test-utils";
-import counter from "../../src/components/counterApp.vue";
+import counter from "@/components/counterApp.vue";
 describe("Testing counte", () => {
   test("shouls match snapshot", () => {
     const wrapper = mount(counter, {
