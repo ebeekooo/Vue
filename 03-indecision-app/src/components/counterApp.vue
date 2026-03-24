@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h3>Counter:{{ counter }}</h3>
-    <h3>Square:{{ squareC }}</h3>
+    <h3 data-testid="counterLabel">Counter:{{ counter }}</h3>
+    <h3 data-testid="squareLabel">Square:{{ squareC }}</h3>
 
     <div>
-      <button class="btn">+1</button>
+      <button class="btn" @click="counter++">+1</button>
       <button class="btn" v-on:click="counter--">-1</button>
     </div>
   </section>
@@ -14,11 +14,11 @@
 import { computed, ref } from 'vue';
 
 interface Props {
-  value?: number;
+  value: number;
 }
 const props = defineProps<Props>();
 
-const counter = ref(props.value ?? 5);
+const counter = ref(props.value);
 const squareC = computed(() => counter.value * counter.value);
 </script>
 <style scoped>
