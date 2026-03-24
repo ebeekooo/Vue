@@ -35,13 +35,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import { send } from 'vite';
 import { ref } from 'vue';
 const emits = defineEmits<{
   sendMessages: [text: string];
 }>();
 
-const message = ref<string>('');
+const message = ref('');
 const sendMessage = () => {
   if (!message.value) return;
   emits('sendMessages', message.value);
