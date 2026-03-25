@@ -1,4 +1,4 @@
-import { pokemonApi } from '@/pokemon/api/pokemonApi';
+import { pokemonApi } from '@/modules/pokemon/api/pokemonApi';
 import { test, describe, expect } from 'vitest';
 
 describe('pokemonApi', () => {
