@@ -15,6 +15,6 @@
 @reference 'tailwindcss';
 
 li {
-  @apply shadow-md rounded-lg p-3 cursor-pointer w-40 text-center transition-all duration-300 ease-in-out hover:bg-gray-100;
+  @apply bg-white shadow-md rounded-lg p-3 cursor-pointer w-40 text-center transition-all duration-300 ease-in-out hover:bg-gray-100;
 }
 </style>

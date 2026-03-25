@@ -20,4 +20,7 @@
 <script setup lang="ts">
 import PokemonPicture from '../components/pokemonPicture.vue';
 import PokemonOptions from '../components/pokemonOptions.vue';
+import { usePokemon, usePokemonGame } from '../composables/usePokemonGame';
+import { gameStatus } from '../interfaces/game-status.enum';
+const { gameStatus } = usePokemonGame();
 </script>
