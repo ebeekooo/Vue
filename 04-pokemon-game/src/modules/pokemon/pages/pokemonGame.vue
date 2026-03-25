@@ -17,7 +17,7 @@
     />
     <!-- options -->
 
-    <PokemonOptions :options="pokemonsOptions" @selected-option="onSelectedOp" />
+    <PokemonOptions :options="pokemonsOptions" @selected-option="checkAnswer" />
   </section>
 </template>
 
@@ -27,8 +27,5 @@ import PokemonOptions from '../components/pokemonOptions.vue';
 import { usePokemonGame } from '../composables/usePokemonGame';
 import { gameStatus } from '../interfaces/game-status.enum';
 
-const { randomPokemon, isLoading, GameStatus, pokemonsOptions } = usePokemonGame();
-const onSelectedOp = (value: number) => {
-  console.log({ value });
-};
+const { randomPokemon, isLoading, GameStatus, pokemonsOptions, checkAnswer } = usePokemonGame();
 </script>
