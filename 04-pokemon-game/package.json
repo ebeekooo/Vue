@@ -18,6 +18,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "axios": "^1.13.6",
+    "canvas-confetti": "^1.9.4",
     "tailwindcss": "^4.2.2",
     "vue": "^3.5.30"
   },

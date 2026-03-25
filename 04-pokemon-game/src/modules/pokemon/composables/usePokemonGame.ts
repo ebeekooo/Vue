@@ -34,6 +34,14 @@ export const usePokemonGame = () => {
     pokemons.value = pokemons.value.slice(howMany);
   };
 
+  const checkAnswer = (id: number) => {
+    const hasWon = randomPokemon.value?.id === id;
+
+    if (hasWon) {
+      GameStatus.value = gameStatus.Won;
+    }
+  };
+
   onMounted(async () => {
     await new Promise((r) => setTimeout(r, 1000));
     pokemons.value = await getPokemons();

@@ -9,7 +9,7 @@
 
   <section v-else class="flex flex-col items-center justify-center items-center w-screen h-screen">
     <h1 class="m-2">¿Quién es este pokemon?</h1>
-    <h3>{{ randomPokemon }}</h3>
+    <h3 class="capitalize">{{ gameStatus }}</h3>
     <!-- pokemon image -->
     <PokemonPicture
       :pokemon-id="randomPokemon.id"
@@ -17,7 +17,7 @@
     />
     <!-- options -->
 
-    <PokemonOptions :options="pokemonsOptions" />
+    <PokemonOptions :options="pokemonsOptions" @selected-option="onSelectedOp" />
   </section>
 </template>
 
@@ -28,4 +28,7 @@ import { usePokemonGame } from '../composables/usePokemonGame';
 import { gameStatus } from '../interfaces/game-status.enum';
 
 const { randomPokemon, isLoading, GameStatus, pokemonsOptions } = usePokemonGame();
+const onSelectedOp = (value: number) => {
+  console.log({ value });
+};
 </script>
