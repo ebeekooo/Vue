@@ -55,6 +55,8 @@ export const usePokemonGame = () => {
     await new Promise((r) => setTimeout(r, 1000));
     pokemons.value = await getPokemons();
     getNextRound();
+    console.log(pokemonsOptions.value);
+    console.log('finished mounted process');
   });
 
   return {
