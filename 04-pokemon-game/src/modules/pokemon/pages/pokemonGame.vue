@@ -3,8 +3,8 @@
     v-if="isLoading || !randomPokemon"
     class="flex flex-col items-center justify-center items-screen w-screen h-screen"
   >
-    <h1>Espere por favor</h1>
-    <h3 class="animate-pulse">Cargando pokemon...</h3>
+    <h1 class="text-3xl">Espere por favor</h1>
+    <h3 class="animate-pulse">Cargando Pokémons</h3>
   </section>
 
   <section v-else class="flex flex-col items-center justify-center items-center w-screen h-screen">
@@ -13,9 +13,10 @@
       <button
         v-if="GameStatus !== gameStatus.Playing"
         @click="getNextRound(4)"
+        data-test-id="btn-new-game"
         class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-800 transition-all"
       >
-        Jugar de nuevo
+        ¿Jugar de nuevo?
       </button>
     </div>
     <!-- pokemon image -->
