@@ -8,31 +8,24 @@
         </a>
       </div>
       <nav class="ml-auto space-x-4 flex items-center h-10 sm:space-x-6">
-        <a href="#"> Home </a>
-        <a href="#"> Features </a>
-        <a href="#"> Pricing </a>
-        <a href="#"> Contact </a>
+        <RouterLink to="/"> Home </RouterLink>
+        <RouterLink to="/features"> Features </RouterLink>
+        <RouterLink to="/pricing"> Pricing </RouterLink>
+        <RouterLink to="/contact"> Contact </RouterLink>
       </nav>
     </header>
     <!-- Fin Header -->
 
     <!-- Main -->
     <main class="flex-1 flex items-center justify-center py-6">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl">
-          Bienvenido a nuestro sitio web
-        </h1>
-        <p class="mx-auto max-w-[600px] text-gray-500 md:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
+      <RouterView />
     </main>
     <!-- Fin Main -->
 
     <!-- Footer -->
     <footer class="flex items-center h-14 px-4 border-t border-gray-300 sm:h-16 md:px-6 lg:px-8">
       <p class="flex-1 text-sm text-gray-500 text-center">
-        © 20xx Acme Corporation. Derechos reservados
+        © {{ new Date().getFullYear() }} Acme Corporation. Derechos reservados
       </p>
     </footer>
     <!-- Fin Footer -->
