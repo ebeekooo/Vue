@@ -15,6 +15,7 @@
           <RouterLink to="/contact"> Contact </RouterLink>
         </div>
         <div class="space-x-4">
+          <RouterLink to="/pokemon/1"> Pokemons </RouterLink>
           <RouterLink to="/auth"> Login </RouterLink>
         </div>
       </nav>
