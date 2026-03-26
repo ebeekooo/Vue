@@ -1,3 +1,4 @@
+import NotFound404 from '@/modules/common/pages/notFound404.vue';
 import HomePage from '@/modules/landing/pages/homePage.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
@@ -31,21 +32,30 @@ const router = createRouter({
         },
       ],
     },
-    //Auth
+    // Auth
     {
       path: '/auth',
-      redirect: '/login',
+      redirect: { name: 'login' }, //'/login',
       component: () => import('@/modules/auth/layouts/authLayout.vue'),
       children: [
         {
-          path: '/login',
+          path: 'login',
+          name: 'login',
           component: () => import('@/modules/auth/pages/LoginPage.vue'),
         },
         {
-          path: '/register',
+          path: 'register',
+          name: 'register',
           component: () => import('@/modules/auth/pages/registerPage.vue'),
         },
       ],
+    },
+
+    // Not Found
+    {
+      path: '/:pathMatch(.*)*',
+      // redirect: '/',
+      component: NotFound404,
     },
   ],
 });
