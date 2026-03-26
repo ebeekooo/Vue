@@ -57,9 +57,6 @@ const onLogin = () => {
 
   const lastPath = localStorage.getItem('lastPath') ?? '/';
 
-  // router.replace({
-  //   // name: 'home',
-  // });
   router.replace(lastPath);
 };
 </script>
