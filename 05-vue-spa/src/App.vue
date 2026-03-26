@@ -17,7 +17,7 @@
     <!-- Fin Header -->
 
     <!-- Main -->
-    <main class="flex-1 flex items-center justify-center">
+    <main class="flex-1 flex overflow-auto items-center justify-center">
       <RouterView />
     </main>
     <!-- Fin Main -->
