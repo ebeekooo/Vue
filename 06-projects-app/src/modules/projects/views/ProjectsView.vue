@@ -5,13 +5,16 @@
       <thead>
         <tr>
           <th></th>
-          <th>Proyecto</th>
-          <th>Tareas</th>
-          <th>Avance</th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Favorite Color</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="hover">
+        <!-- row 1 -->
+
+        <!-- row 2 -->
+        <tr class="hover:bg-base-300">
           <th>2</th>
           <td>Hart Hagerty</td>
           <td>Desktop Support Technician</td>
@@ -20,4 +23,8 @@
       </tbody>
     </table>
   </div>
+  <FavBotton />
 </template>
+<script setup lang="ts">
+import FavBotton from '@/modules/common/components/FavBotton.vue';
+</script>
