@@ -1,3 +1,4 @@
+import isAutheticatedGuard from '@/modules/auth/guards/is-authenticated.guard';
 import NotFound404 from '@/modules/common/pages/notFound404.vue';
 import HomePage from '@/modules/landing/pages/homePage.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -33,6 +34,7 @@ const router = createRouter({
         {
           path: '/pokemon/:id',
           name: 'pokemon',
+          beforeEnter: [isAutheticatedGuard],
           // beforeEnter: [
           //   (to, from, next) => {
           //     return next();

@@ -11,5 +11,6 @@ const isAutheticatedGuard = (
     return next({
       name: 'login',
     });
+  return next();
 };
 export default isAutheticatedGuard;
