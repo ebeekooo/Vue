@@ -33,7 +33,11 @@ const router = createRouter({
         {
           path: '/pokemon/:id',
           name: 'pokemon',
-
+          // beforeEnter: [
+          //   (to, from, next) => {
+          //     return next();
+          //   },
+          // ],
           props: (route) => {
             const id = Number(route.params.id);
 
