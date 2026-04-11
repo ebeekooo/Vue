@@ -23,8 +23,11 @@
       </tbody>
     </table>
   </div>
-  <FavBotton />
+  <fav-botton>
+    <add-circle />
+  </fav-botton>
 </template>
 <script setup lang="ts">
 import FavBotton from '@/modules/common/components/FavBotton.vue';
+import AddCircle from '@/modules/common/icons/addCircle.vue';
 </script>
