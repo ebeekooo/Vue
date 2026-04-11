@@ -31,9 +31,30 @@
     title="Nuevo Proyecto"
     sub-title="Dale un nombre único a tu proyecto"
   />
+  <custom-modal :open="customModalOpen">
+    <template #header>
+      <h1 class="text-3xl">Titulo del modal</h1>
+    </template>
+
+    <template #body>
+      <p>
+        Nulla consequat non ullamco mollit est quis duis pariatur cupidatat consequat Lorem cillum.
+      </p>
+    </template>
+
+    <template #footer>
+      <div class="flex justify-end">
+        <button @click="customModalOpen = false" class="btn mr-4">Close</button>
+        <button @click="customModalOpen = false" class="btn btn-primary">Aceptar</button>
+      </div>
+    </template>
+  </custom-modal>
 
   <fav-botton @click="modalOpen = true">
     <add-circle />
+  </fav-botton>
+  <fav-botton @click="customModalOpen = true" position="bottom-left">
+    <modal-icon />
   </fav-botton>
 </template>
 <script setup lang="ts">
@@ -41,9 +62,11 @@ import { ref } from 'vue';
 import FavBotton from '@/modules/common/components/FavBotton.vue';
 import AddCircle from '@/modules/common/icons/addCircle.vue';
 import InputModal from '@/modules/common/components/inputModal.vue';
+import ModalIcon from '@/modules/common/icons/modalIcon.vue';
+import CustomModal from '@/modules/common/components/customModal.vue';
 
 const modalOpen = ref(false);
-//const customModalOpen = ref(false);
+const customModalOpen = ref(false);
 
 const onNewValue = (projectName: string) => {
   console.log({ projectName });
