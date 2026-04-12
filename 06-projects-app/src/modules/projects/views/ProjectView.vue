@@ -55,7 +55,7 @@ import { useRouter } from 'vue-router';
 
 import BreadCrumbs from '@/modules/common/components/breadCrumbs.vue';
 import { useProjectsStore } from '../store/projects.store';
-import type { Project } from '../interfaces/project.interface';
+import type { Project } from '../interfaces/project.interfaces';
 
 interface Props {
   id: string;
