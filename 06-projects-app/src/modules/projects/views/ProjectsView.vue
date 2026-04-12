@@ -11,14 +11,23 @@
         </tr>
       </thead>
       <tbody>
-        <!-- row 1 -->
-
-        <!-- row 2 -->
-        <tr class="hover:bg-base-300">
-          <th>2</th>
-          <td>Hart Hagerty</td>
-          <td>Desktop Support Technician</td>
-          <td>Purple</td>
+        <tr
+          v-for="(project, index) in projectsStore.projectsWithCompletion"
+          :key="project.id"
+          class="hover"
+        >
+          <th>{{ index + 1 }}</th>
+          <td>
+            <span @dblclick="console.log('dbclick')">{{ project.name }}</span>
+          </td>
+          <td>{{ project.taskCount }}</td>
+          <td>
+            <progress
+              class="progress progress-primary w-56"
+              :value="project.completion"
+              max="100"
+            ></progress>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -64,7 +73,9 @@ import AddCircle from '@/modules/common/icons/addCircle.vue';
 import InputModal from '@/modules/common/components/inputModal.vue';
 import ModalIcon from '@/modules/common/icons/modalIcon.vue';
 import CustomModal from '@/modules/common/components/customModal.vue';
+import { useProjectsStore } from '@/stores/projects';
 
+const projectsStore = useProjectsStore();
 const modalOpen = ref(false);
 const customModalOpen = ref(false);
 
