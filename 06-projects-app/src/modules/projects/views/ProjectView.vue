@@ -53,7 +53,7 @@
 import { ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 
-import BreadCrumbs from '@/modules/common/components/BreadCrumbs.vue';
+import BreadCrumbs from '@/modules/common/components/breadCrumbs.vue';
 import { useProjectsStore } from '../store/projects.store';
 import type { Project } from '../interfaces/project.interface';
 
