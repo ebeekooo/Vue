@@ -35,7 +35,7 @@
   <input-modal
     :open="modalOpen"
     @close="modalOpen = false"
-    @value="onNewValue"
+    @value="projectsStore.addProject"
     placeholder="Ingrese el nombre del proyecto"
     title="Nuevo Proyecto"
     sub-title="Dale un nombre único a tu proyecto"
@@ -73,13 +73,13 @@ import AddCircle from '@/modules/common/icons/addCircle.vue';
 import InputModal from '@/modules/common/components/inputModal.vue';
 import ModalIcon from '@/modules/common/icons/modalIcon.vue';
 import CustomModal from '@/modules/common/components/customModal.vue';
-import { useProjectsStore } from '@/stores/projects';
+import { useProjectsStore } from '@/modules/projects/store/projects.store';
 
 const projectsStore = useProjectsStore();
 const modalOpen = ref(false);
 const customModalOpen = ref(false);
 
-const onNewValue = (projectName: string) => {
-  console.log({ projectName });
-};
+//const onNewValue = (projectName: string) => {
+//  console.log({ projectName });
+//};
 </script>
