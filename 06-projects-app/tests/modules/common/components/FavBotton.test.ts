@@ -23,4 +23,15 @@ describe('<FavBotton/>', () => {
 
     expect(button.classes()).toContain('top-left');
   });
+  test('renders with top-right position', () => {
+    const wrapper = shallowMount(FavBotton, {
+      props: {
+        position: 'top-right',
+      },
+    });
+
+    const button = wrapper.find('button');
+
+    expect(button.classes()).toContain('top-right');
+  });
 });
