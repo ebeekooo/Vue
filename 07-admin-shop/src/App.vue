@@ -1,5 +1,8 @@
 <template>
-  <h1>You did it!</h1>
   <RouterView />
+  <VueQueryDevtools />
 </template>
-<script setup lang="ts"></script>
+
+<script lang="ts" setup>
+import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
+</script>
