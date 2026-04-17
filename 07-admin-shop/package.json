@@ -19,10 +19,12 @@
     "@tailwindcss/vite": "^4.2.2",
     "@tanstack/vue-query": "^5.99.0",
     "@tanstack/vue-query-devtools": "^6.1.16",
+    "@vueuse/core": "^14.2.1",
     "pinia": "^3.0.4",
     "tailwindcss": "^4.2.2",
     "vue": "^3.5.31",
-    "vue-router": "^5.0.4"
+    "vue-router": "^5.0.4",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
