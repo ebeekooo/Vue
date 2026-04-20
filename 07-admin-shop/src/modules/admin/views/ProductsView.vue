@@ -55,7 +55,7 @@ import { watchEffect } from 'vue';
 import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import { getProductsAction } from '@/modules/products/actions';
 import ButtonPagination from '@/modules/common/components/ButtonPagination.vue';
-import { usePagination } from '@/modules/common/composables/usePagination';
+import { usePagination } from '@/modules/common/composable/usePagination';
 
 const queryClient = useQueryClient();
 const { page } = usePagination();
