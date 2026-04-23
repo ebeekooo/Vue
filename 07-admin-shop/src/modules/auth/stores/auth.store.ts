@@ -1,6 +1,7 @@
 import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
-import { AuthStatus, type User } from '../interfaces/auth-status.enum';
+import { AuthStatus } from '../interfaces/auth-status.enum';
+import type { User } from '../interfaces';
 import { checkAuthAction, loginAction, registerAction } from '../actions';
 import { useLocalStorage } from '@vueuse/core';
 

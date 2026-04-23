@@ -1,5 +1,5 @@
 import { tesloApi } from '@/api/tesloApi';
-import type { AuthResponse, User } from '../interfaces/auth.response';
+import type { AuthResponse, User } from '../interfaces';
 import { isAxiosError } from 'axios';
 
 interface LoginError {

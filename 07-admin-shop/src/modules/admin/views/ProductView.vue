@@ -130,6 +130,8 @@
 <script src="./ProductView.ts" lang="ts"></script>
 
 <style scoped>
+@reference "tailwindcss";
+
 .form-label {
   @apply block text-gray-700 text-sm font-bold mb-2;
 }
